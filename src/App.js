@@ -10,6 +10,8 @@ function App() {
       <DatePicker
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
+        dateFormat='dd/mm/yyyy'
+        filterDate={(date) => date.getDay() !== 0 && date.getDay() !== 6}
       />
     </div>
   );
